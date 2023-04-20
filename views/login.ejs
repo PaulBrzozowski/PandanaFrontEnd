@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <style>
+    body {
+      background-color: #1B1C1E;
+      color: #FFFFFF;
+    }
+
+    h1 {
+      text-align: center;
+      color: #28A745;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    input[type=text], input[type=password] {
+      width: 50%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid #28A745;
+      border-radius: 4px;
+      background-color: #F8F9FA;
+      color: #1B1C1E;
+    }
+
+    input[type=submit] {
+      background-color: #28A745;
+      color: #FFFFFF;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #1B1C1E;
+      color: #6C757D;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Login to Adcetera Database</h1>
+  <form action="/login" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password">
+    <input type="submit" value="Login">
+  </form>
+  <footer>&copy; Pandana Tech 2023</footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <style>
+      body {
+        background-color: #1B1C1E;
+        color: #FFFFFF;
+      }
+    
+      h1 {
+        text-align: center;
+        color: #28A745;
+      }
+    
+      table {
+        margin: auto;
+        border: 2px solid #28A745;
+        border-collapse: collapse;
+      }
+    
+      th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #28A745;
+      }
+    
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #1B1C1E;
+        color: #6C757D;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <table>
+      <thead>
+        <tr>
+          <% for (let i = 0; i < tableContents.columns.length; i++) { %>
+            <th><%= tableContents.columns[i] %></th>
+          <% } %>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (let i = 0; i < tableContents.data.length; i++) { %>
+          <tr>
+            <% const row = tableContents.data[i]; %>
+            <% for (const [key, value] of Object.entries(row)) { %>
+              <td><%= value %></td>
+            <% } %>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </body>
+</html>
